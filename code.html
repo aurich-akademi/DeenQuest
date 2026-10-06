@@ -1,0 +1,773 @@
+<!DOCTYPE html><html lang="ms"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "error": "#ba1a1a",
+        "inverse-on-surface": "#ebf1ff",
+        "tertiary": "#006591",
+        "tertiary-fixed": "#c9e6ff",
+        "surface-container": "#e6eeff",
+        "surface-container-highest": "#d5e3fd",
+        "on-surface": "#0d1c2f",
+        "background": "#f8f9ff",
+        "surface-container-high": "#dde9ff",
+        "on-tertiary-fixed": "#001e2f",
+        "primary-container": "#10b981",
+        "surface-container-low": "#eff4ff",
+        "on-primary-fixed": "#002113",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#00422b",
+        "on-secondary-fixed": "#2a1700",
+        "inverse-surface": "#233144",
+        "secondary": "#855300",
+        "on-tertiary": "#ffffff",
+        "inverse-primary": "#4edea3",
+        "surface-container-lowest": "#ffffff",
+        "tertiary-fixed-dim": "#89ceff",
+        "on-primary-fixed-variant": "#005236",
+        "on-primary": "#ffffff",
+        "surface-bright": "#f8f9ff",
+        "on-secondary-container": "#684000",
+        "on-error-container": "#93000a",
+        "on-secondary-fixed-variant": "#653e00",
+        "primary-fixed": "#6ffbbe",
+        "surface": "#f8f9ff",
+        "on-error": "#ffffff",
+        "surface-variant": "#d5e3fd",
+        "on-tertiary-fixed-variant": "#004c6e",
+        "on-surface-variant": "#3c4a42",
+        "primary-fixed-dim": "#4edea3",
+        "primary": "#006c49",
+        "tertiary-container": "#23acf1",
+        "on-tertiary-container": "#003d59",
+        "error-container": "#ffdad6",
+        "surface-dim": "#ccdbf4",
+        "secondary-container": "#fea619",
+        "secondary-fixed-dim": "#ffb95f",
+        "secondary-fixed": "#ffddb8",
+        "surface-tint": "#006c49",
+        "on-background": "#0d1c2f",
+        "outline-variant": "#bbcabf",
+        "outline": "#6c7a71"
+      },
+      "borderRadius": {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-xl": "2rem",
+        "space-xs": "0.25rem",
+        "space-lg": "1.5rem",
+        "gutter-tablet": "1.5rem",
+        "margin-tablet": "2rem",
+        "margin": "1rem",
+        "space-md": "1rem",
+        "space-sm": "0.5rem",
+        "gutter": "1rem",
+        "margin-desktop": "3rem",
+        "gutter-desktop": "2rem"
+      },
+      "fontFamily": {
+        "body-sm": ["Plus Jakarta Sans"],
+        "headline-xl-mobile": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-xl": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+        "headline-xl-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "800"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "800"}],
+        "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "700"}],
+        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+        "label-lg": ["16px", {"lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}],
+        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(13,28,47,0.06)]"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="UPKK Adventure Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmXuK1sWXFRofEAsu_L9gAVGBCg3OVmJjQuwDCdW2sOGuGGDAcrAYgHfI_SyrW7bfJMhGmjiu78WUgWRDLVX4qOYN8rH2L4VW3v7tgsy2z-kM_onRHMaN2RIItaFDq-sZ8ugxUZl9r0unuX2jWZXhlCUCZ2nO2Z653WFz84goxMefNqSkobMmMRTNNAR6qVOdz8oiGkh9oYbb4ZuI-UYOvW2k_pMnsakzcuKk-yrQrhm3VikNRut1rLQ"><div class="hidden sm:flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">UPKK Adventure</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Kembara Pintar UPKK</span></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-lowest p-space-xs rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.04)]" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm rounded-full shadow-[0_3px_0_#059669]"><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-headline-sm rounded-full shadow-[0_3px_0_#059669]" data-path="peta-kembara" href="#">Peta Kembara</a><a class="px-space-md py-space-xs text-on-surface-variant font-label-lg text-label-lg rounded-full hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dunia-subjek" href="#">Dunia Subjek</a><a class="px-space-md py-space-xs text-on-surface-variant font-label-lg text-label-lg rounded-full hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cabaran-harian" href="#">Cabaran Harian</a><a class="px-space-md py-space-xs text-on-surface-variant font-label-lg text-label-lg rounded-full hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="kedai-ganjaran" href="#">Kedai Ganjaran</a><a class="px-space-md py-space-xs text-on-surface-variant font-label-lg text-label-lg rounded-full hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ruang-ibu-bapa" href="#">Ruang Ibu Bapa</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-space-md py-space-xs bg-surface-container-lowest rounded-full shadow-[0_3px_0_#CBD5E1]"><span class="text-base leading-none">🔥</span><span class="font-label-md text-label-md text-secondary">7 Hari</span></div><div class="flex items-center gap-1.5 px-space-md py-space-xs bg-surface-container-lowest rounded-full shadow-[0_3px_0_#CBD5E1]"><span class="text-base leading-none">🪙</span><span class="font-label-md text-label-md text-on-secondary-container">450</span></div><div class="flex items-center gap-1.5 px-space-md py-space-xs bg-surface-container-lowest rounded-full shadow-[0_3px_0_#CBD5E1]"><span class="text-base leading-none">⭐</span><span class="font-label-md text-label-md text-tertiary">12</span></div></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_2px_0_#00422b]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">Tahap 3</span><span class="font-label-sm text-label-sm text-primary font-bold leading-tight">Pencari Ilmu</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl lg:py-24">
+<!-- Atmospheric playful glows -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-r from-primary-fixed/30 via-tertiary-fixed/30 to-secondary-fixed/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Hero Text & Chunky Buttons -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<!-- Floating Announcement Pill -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-[0_3px_0_#CBD5E1] transition-transform hover:-translate-y-0.5">
+<span class="text-xl">🌟</span>
+<span class="font-label-md text-label-md text-primary font-bold">Kembara Pembelajaran Interaktif Murid Tahun 2 &amp; 3</span>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full uppercase">Baharu</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
+          Jom Terokai Kembara <span class="text-primary underline decoration-secondary-container decoration-wavy decoration-4">UPKK Paling Menyeronokkan!</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Belajar Sirah, Ibadah, Adab, Akidah &amp; Jawi sambil kumpul XP, trofi bintang berkilau, dan buka pelbagai kostum avatar impianmu dalam dunia pengembaraan Islamik!
+        </p>
+<!-- CTA Buttons with 3D Tactile Duolingo-style push-down -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary-container font-headline-sm text-headline-sm px-space-xl py-4 rounded-full shadow-[0_5px_0_#00422b] hover:shadow-[0_2px_0_#00422b] hover:translate-y-1 active:translate-y-1.5 active:shadow-none transition-all" href="#peta-dunia">
+<span class="">Mula Kembara Sekarang</span>
+<span class="text-xl">🚀</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest text-secondary font-headline-sm text-headline-sm px-space-lg py-4 rounded-full shadow-[0_5px_0_#CBD5E1] hover:shadow-[0_2px_0_#CBD5E1] hover:translate-y-1 active:translate-y-1.5 active:shadow-none transition-all" href="#demo-kuiz">
+<span class="text-secondary-container text-xl">⭐</span>
+<span class="">Cuba Kuiz Demo</span>
+</a>
+</div>
+<!-- Micro Social Proof & Floating Badges Strip -->
+<div class="pt-space-md flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-[0_3px_0_#CBD5E1]">
+<span class="text-lg">🔥</span>
+<span class="font-label-md text-label-md text-secondary">7-Hari Streak Berturut!</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-[0_3px_0_#CBD5E1]">
+<span class="text-lg">⚡</span>
+<span class="font-label-md text-label-md text-primary">+50 XP Bonus Hari Ini</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-[0_3px_0_#CBD5E1]">
+<span class="text-lg">🏆</span>
+<span class="font-label-md text-label-md text-tertiary">Lencana Wira Sirah</span>
+</div>
+</div>
+</div>
+<!-- Right Hero Avatar Spotlight -->
+<div class="lg:col-span-5 relative flex justify-center items-center">
+<!-- Circular Soft Platform Backdrop -->
+<div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-surface-container-highest via-surface-container-low to-primary-fixed/40 flex items-center justify-center p-4 shadow-[0_12px_32px_rgba(0,108,73,0.12)]">
+<!-- Avatar Image Render -->
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest shadow-[0_6px_0_#CBD5E1]">
+<img alt="Athea Pengembara Cilik UPKK" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOVKzIKHjMX0CaW0jBLQoJmuqlqzRraehIr1kcMEWUAWiDaG6UGniPw5I_81fUC3iGCfdAaXImKF3MUAk945C5-hTino9czLS5qoizd0deuHSEBHkdRh9atEcpPKwu02H7M38-qjj9aRJE_6hUeVOV78D_ZZgTVzMQ9U_i-dv_NkBrZdEXV-nqDL44c8PaYiM6qqETdG8AMsrtZW3rYAjni5EQ1PRhwwoVnrKGb0MdhtYb5N1_NQhkyA">
+</div>
+<!-- Speech Bubble -->
+<div class="absolute -bottom-6 -left-4 sm:-left-8 bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_6px_0_#CBD5E1] max-w-[260px] animate-bounce" style="animation-duration: 3s;">
+<div class="flex items-start gap-2">
+<span class="text-2xl">👋</span>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold leading-snug">Hai kawan-kawan! Saya <strong class="text-primary font-bold">Athea</strong>. Jom sertai saya selesaikan misi di Kampung Adab!</p>
+</div>
+<!-- Bubble Pin -->
+<div class="absolute -top-2 right-12 w-4 h-4 bg-surface-container-lowest rotate-45"></div>
+</div>
+<!-- Floating XP Tag Top Right -->
+<div class="absolute -top-3 -right-2 bg-secondary-container text-on-secondary-fixed font-headline-sm text-headline-sm px-4 py-2 rounded-full shadow-[0_4px_0_#684000] rotate-6 flex items-center gap-1.5">
+<span class="">🪙</span>
+<span class="">+100 Koin!</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE ADVENTURE MAP EXPLORER -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-low" id="peta-dunia">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full text-primary font-label-md text-label-md mb-2">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span class="">Peta Kembara UPKK</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">6 Dunia Pengembaraan Pintar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Selesaikan misi setiap pulau untuk membuka dunia baru, menewaskan cabaran soalan &amp; menjadi Juara UPKK Sejati!
+          </p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-4 py-2 rounded-full shadow-[0_3px_0_#CBD5E1]">
+<span class="font-label-md text-label-md text-on-surface-variant">Kemajuan Keseluruhan:</span>
+<span class="font-headline-sm text-headline-sm text-primary">35%</span>
+</div>
+</div>
+<!-- 6 Themed RPG Stage Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg pt-space-xs">
+<!-- Dunia 1: Kampung Adab (Active / 3 Stars) -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-[0_6px_0_#CBD5E1] hover:shadow-[0_2px_0_#CBD5E1] hover:translate-y-1 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-3xl shadow-[0_3px_0_#4edea3]">
+              🏡
+            </div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-secondary font-label-md">
+<span class="">⭐⭐⭐</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Tahap 1 • Selesai</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Kampung Adab</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Adab dengan Ibu Bapa, Menghormati Guru &amp; Rakan Sebaya di Sekolah.
+            </p>
+</div>
+<div class="pt-space-sm">
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden mb-space-sm">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+<button class="w-full py-2.5 bg-surface-container-high text-primary font-label-lg text-label-lg rounded-full font-bold flex items-center justify-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="">Ulang Kaji Misi</span>
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+</div>
+</div>
+<!-- Dunia 2: Masjid Ibadah (Active / 2 Stars) -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-[0_6px_0_#CBD5E1] hover:shadow-[0_2px_0_#CBD5E1] hover:translate-y-1 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-3xl shadow-[0_3px_0_#89ceff]">
+              🕌
+            </div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-secondary font-label-md">
+<span class="">⭐⭐☆</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Tahap 2 • Sedang Maju</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Masjid Ibadah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Rukun Wuduk yang Sempurna, Solat Fardu, Azan &amp; Iqamah.
+            </p>
+</div>
+<div class="pt-space-sm">
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden mb-space-sm">
+<div class="bg-tertiary-container h-full rounded-full w-2/3"></div>
+</div>
+<button class="w-full py-2.5 bg-tertiary-container text-on-tertiary-container font-label-lg text-label-lg rounded-full font-bold shadow-[0_3px_0_#003d59] flex items-center justify-center gap-1 hover:shadow-none hover:translate-y-0.5 transition-all">
+<span class="">Sambung Misi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Dunia 3: Bukit Akidah (Active Mission In Progress) -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-[0_6px_0_#CBD5E1] hover:shadow-[0_2px_0_#CBD5E1] hover:translate-y-1 transition-all flex flex-col justify-between ring-2 ring-secondary-container">
+<div class="absolute -top-3 right-4 bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full uppercase font-bold shadow-sm">
+            Sedang Teroka 🧭
+          </div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-3xl shadow-[0_3px_0_#ffb95f]">
+              ⛰️
+            </div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-secondary font-label-md">
+<span class="">⭐☆☆</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Tahap 3 • Terbuka</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Bukit Akidah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Rukun Iman, Mengenal Nama-nama Malaikat, dan Sifat 20 Allah.
+            </p>
+</div>
+<div class="pt-space-sm">
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden mb-space-sm">
+<div class="bg-secondary-container h-full rounded-full w-1/3"></div>
+</div>
+<button class="w-full py-2.5 bg-secondary text-on-secondary font-label-lg text-label-lg rounded-full font-bold shadow-[0_3px_0_#2a1700] flex items-center justify-center gap-1 hover:shadow-none hover:translate-y-0.5 transition-all">
+<span class="">Masuk Bukit Akidah</span>
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Dunia 4: Kota Sirah (Locked) -->
+<div class="relative bg-surface-container-highest/60 rounded-2xl p-space-lg flex flex-col justify-between opacity-85">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-3xl">
+              🏰
+            </div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Tahap 4 • Terkunci</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Kota Sirah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Kisah Kelahiran &amp; Mukjizat Nabi Muhammad SAW, Peristiwa Hijrah.
+            </p>
+</div>
+<div class="pt-space-sm">
+<p class="font-label-sm text-label-sm text-on-surface-variant italic text-center py-2">
+              Selesaikan Bukit Akidah untuk Buka Kunci
+            </p>
+</div>
+</div>
+<!-- Dunia 5: Pulau Jawi (Locked) -->
+<div class="relative bg-surface-container-highest/60 rounded-2xl p-space-lg flex flex-col justify-between opacity-85">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-3xl">
+              🏝️
+            </div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Tahap 5 • Terkunci</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Pulau Jawi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Membaca &amp; Menyambung Huruf Jawi Tunggal, Ejaan Kata Pinjaman.
+            </p>
+</div>
+<div class="pt-space-sm">
+<p class="font-label-sm text-label-sm text-on-surface-variant italic text-center py-2">
+              Buka Selepas Tahap 4
+            </p>
+</div>
+</div>
+<!-- Dunia 6: Arabia Quest (Locked) -->
+<div class="relative bg-surface-container-highest/60 rounded-2xl p-space-lg flex flex-col justify-between opacity-85">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-3xl">
+              🏜️
+            </div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Tahap 6 • Terkunci</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Arabia Quest</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Kosa Kata Asas Lughah Arabiah: Anggota Badan, Peralatan &amp; Warna.
+            </p>
+</div>
+<div class="pt-space-sm">
+<p class="font-label-sm text-label-sm text-on-surface-variant italic text-center py-2">
+              Peringkat Terakhir Kembara UPKK
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LIVE MINI-CHALLENGE DEMO -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl" id="demo-kuiz">
+<div class="max-w-4xl mx-auto flex flex-col items-center">
+<!-- Section Badge -->
+<div class="inline-flex items-center gap-2 bg-secondary-fixed px-4 py-1.5 rounded-full shadow-[0_3px_0_#ffb95f] mb-space-sm">
+<span class="text-xl">⚡</span>
+<span class="font-headline-sm text-headline-sm text-on-secondary-fixed">Cuba Soalan Mini Terus Di Sini!</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-center text-on-surface mb-space-lg">
+        Cabaran Pantas: Adab Bersama Ibu Bapa
+      </h2>
+<!-- Quiz Card Shell -->
+<div class="w-full bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-[0_8px_0_#CBD5E1]">
+<!-- Header Info Bar -->
+<div class="flex items-center justify-between border-b-2 border-surface-container-high pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full uppercase font-bold">Adab • Tahun 3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Soalan 1 daripada 1</span>
+</div>
+<!-- TTS Audio Button -->
+<button class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-full text-tertiary hover:bg-surface-container-high transition-colors font-label-md text-label-md" id="tts-btn" onclick="playAudioPrompt()">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<span class="">Dengar Soalan</span>
+</button>
+</div>
+<!-- Question Prompt -->
+<div class="mb-space-lg">
+<p class="font-headline-md text-headline-md text-on-surface leading-snug">Irsyad melihat ibunya baru pulang dari pasar membawa banyak beg barang dapur yang berat. Apakah tindakan terbaik Irsyad?</p>
+</div>
+<!-- 4 Option Buttons (Gamified Tactile) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-lg">
+<!-- Correct Option A -->
+<button class="option-btn text-left p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container shadow-[0_4px_0_#CBD5E1] active:translate-y-1 active:shadow-none transition-all flex items-start gap-3" id="opt-a" onclick="handleSelectOption('A')">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm shrink-0">A</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold pt-0.5">Segera membantu ibu membawa beg barang ke dapur</span>
+</button>
+<!-- Wrong Option B -->
+<button class="option-btn text-left p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container shadow-[0_4px_0_#CBD5E1] active:translate-y-1 active:shadow-none transition-all flex items-start gap-3" id="opt-b" onclick="handleSelectOption('B')">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-headline-sm text-headline-sm shrink-0">B</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold pt-0.5">Terus berlari keluar bermain basikal dengan kawan</span>
+</button>
+<!-- Wrong Option C -->
+<button class="option-btn text-left p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container shadow-[0_4px_0_#CBD5E1] active:translate-y-1 active:shadow-none transition-all flex items-start gap-3" id="opt-c" onclick="handleSelectOption('C')">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-headline-sm text-headline-sm shrink-0">C</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold pt-0.5">Membiarkan ibu mengangkat seorang diri tanpa hirau</span>
+</button>
+<!-- Wrong Option D -->
+<button class="option-btn text-left p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container shadow-[0_4px_0_#CBD5E1] active:translate-y-1 active:shadow-none transition-all flex items-start gap-3" id="opt-d" onclick="handleSelectOption('D')">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-headline-sm text-headline-sm shrink-0">D</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold pt-0.5">Menonton rancangan kartun televisyen di ruang tamu</span>
+</button>
+</div>
+<!-- Instant Feedback Box (Hidden Initially) -->
+<div class="hidden bg-primary-fixed/30 rounded-2xl p-space-md shadow-[0_3px_0_#4edea3]" id="quiz-feedback">
+<div class="flex items-start gap-3">
+<span class="text-3xl">🎉</span>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-headline-sm text-headline-sm text-on-primary-fixed font-bold">Tahniah! Jawapan Tepat!</span>
+<span class="bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm px-2 py-0.5 rounded-full font-bold">+10 XP &amp; ⭐ Bintang Emas</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                "Membantu ibu bapa merupakan akhlak mulia dan amalan terpuji yang sangat dicintai oleh Allah SWT serta membawa keberkatan."
+              </p>
+</div>
+</div>
+</div>
+<div class="hidden bg-error-container/60 rounded-2xl p-space-md shadow-[0_3px_0_#ba1a1a]" id="quiz-error-feedback">
+<div class="flex items-start gap-3">
+<span class="text-3xl">💡</span>
+<div class="flex-1">
+<span class="font-headline-sm text-headline-sm text-error font-bold">Cuba Lagi!</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Sebagai anak yang soleh, apakah yang patut kita buat bila nampak ibu letih membawa barang berat? Cuba pilih jawapan lain!
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8-STEP ADVENTURE LEARNING FLOW -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="text-center max-w-2xl mx-auto">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full text-primary font-label-md text-label-md mb-2">
+<span class="">🧠</span>
+<span class="">Metodologi Pembelajaran Aktif</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Cara Kami Belajar Sambil Bermain</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Direka mengikut daya tumpuan murid umur 8-9 tahun melalui kitaran 8 langkah interaktif:
+        </p>
+</div>
+<!-- 8-Step Mosaic / Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-space-sm pt-space-xs">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary font-headline-sm text-headline-sm flex items-center justify-center mb-2">1</span>
+<span class="text-2xl mb-1">📖</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Cerita</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Animasi Sirah ringkas</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-primary-fixed text-primary font-headline-sm text-headline-sm flex items-center justify-center mb-2">2</span>
+<span class="text-2xl mb-1">💡</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Fikir</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Konsep isi penting</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary font-headline-sm text-headline-sm flex items-center justify-center mb-2">3</span>
+<span class="text-2xl mb-1">🧭</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Teroka</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Sentuh &amp; cari bukti</span>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm flex items-center justify-center mb-2">4</span>
+<span class="text-2xl mb-1">✍️</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Latih Tubi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Padanan &amp; drag-drop</span>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary font-headline-sm text-headline-sm flex items-center justify-center mb-2">5</span>
+<span class="text-2xl mb-1">⚡</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Cabaran</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Ujian masa pendek</span>
+</div>
+<!-- Step 6 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-primary-fixed text-primary font-headline-sm text-headline-sm flex items-center justify-center mb-2">6</span>
+<span class="text-2xl mb-1">🎯</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Maklum Balas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Ulasan serta-merta</span>
+</div>
+<!-- Step 7 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed font-headline-sm text-headline-sm flex items-center justify-center mb-2">7</span>
+<span class="text-2xl mb-1">🏆</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Ganjaran XP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Syiling &amp; item avatar</span>
+</div>
+<!-- Step 8 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] text-center flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary font-headline-sm text-headline-sm flex items-center justify-center mb-2">8</span>
+<span class="text-2xl mb-1">🔄</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Ulang Kaji</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Spaced-repetition</span>
+</div>
+</div>
+</div>
+</section>
+<!-- GAMIFICATION SHOWCASE: GANJARAN & KOSTUM AVATAR -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left side: Shop Inventory Preview -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-secondary-fixed text-secondary font-label-md text-label-md rounded-full w-fit">
+<span class="">🛍️ Kedai Pengembara</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Tukar Syiling Kembara Dengan Kostum &amp; Haiwan Peliharaan!
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Setiap latihan yang diselesaikan menghadiahkan Syiling Emas. Kanak-kanak boleh menghias avatar mereka dengan gaya tempatan yang comel!
+        </p>
+<!-- Catalog Items Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col items-center text-center">
+<span class="text-4xl mb-2">🤠</span>
+<span class="font-label-lg text-label-lg text-on-surface">Topi Rimba</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold flex items-center gap-1 mt-1">
+<span class="">🪙</span> 120 Koin
+            </span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col items-center text-center">
+<span class="text-4xl mb-2">🧕</span>
+<span class="font-label-lg text-label-lg text-on-surface">Tudung Jelajah</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold flex items-center gap-1 mt-1">
+<span class="">🪙</span> 150 Koin
+            </span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col items-center text-center">
+<span class="text-4xl mb-2">🎒</span>
+<span class="font-label-lg text-label-lg text-on-surface">Beg Kembara</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold flex items-center gap-1 mt-1">
+<span class="">🪙</span> 90 Koin
+            </span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col items-center text-center">
+<span class="text-4xl mb-2">🐱</span>
+<span class="font-label-lg text-label-lg text-on-surface">Kucing Kampung</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold flex items-center gap-1 mt-1">
+<span class="">🪙</span> 250 Koin
+            </span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col items-center text-center">
+<span class="text-4xl mb-2">🐯</span>
+<span class="font-label-lg text-label-lg text-on-surface">Si Belang Cilik</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold flex items-center gap-1 mt-1">
+<span class="">🪙</span> 300 Koin
+            </span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col items-center text-center">
+<span class="text-4xl mb-2">🧢</span>
+<span class="font-label-lg text-label-lg text-on-surface">Songkok Hero</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold flex items-center gap-1 mt-1">
+<span class="">🪙</span> 180 Koin
+            </span>
+</div>
+</div>
+</div>
+<!-- Right side: Badges of Mastery -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-3xl p-space-lg md:p-space-xl shadow-[0_8px_0_#CBD5E1] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Lencana Kejuaraan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Koleksi trofi khas pencapaian setiap subjek</p>
+</div>
+<span class="text-3xl">🏅</span>
+</div>
+<div class="space-y-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_3px_0_#CBD5E1] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="text-3xl">📖</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Pakar Akidah</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Sempurnakan 20 soalan Rukun Iman tanpa salah</p>
+</div>
+</div>
+<span class="bg-primary-fixed text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">Dibuka</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_3px_0_#CBD5E1] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="text-3xl">✒️</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Jaguh Jawi</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Menyambung 50 patah perkataan Jawi</p>
+</div>
+</div>
+<span class="bg-primary-fixed text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">Dibuka</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_3px_0_#CBD5E1] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="text-3xl">🕌</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Hebat Ibadah</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Kuasai urutan wuduk dan solat secara interaktif</p>
+</div>
+</div>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">Tahap 2</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_3px_0_#CBD5E1] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="text-3xl">🔥</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">7-Day Streak Master</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Belajar setiap hari selama 7 hari berturut</p>
+</div>
+</div>
+<span class="bg-secondary-fixed text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">Aktif!</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PARENT & TEACHER PEACE OF MIND (Sudut Ibu Bapa) -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="text-center max-w-2xl mx-auto">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full text-primary font-label-md text-label-md mb-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="">Ketenangan Ibu Bapa &amp; Guru</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Direka Selamat, Patuh Syariah &amp; Berkesan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pantau perkembangan hafalan dan pemahaman anak anda secara masa nyata tanpa kerisauan iklan beracun atau kandungan tidak sesuai.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">100% Silibus JAKIM / KPM</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Diselaraskan sepenuhnya dengan format Ujian Penilaian Kelas Kafa (UPKK) Kementerian Pendidikan Malaysia.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Semakan Ketepatan Islamik</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Setiap fakta Sirah, dalil Akidah dan tatacara Ibadah disahkan oleh barisan asatizah bertauliah.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">shield</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bebas Iklan &amp; Selamat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sifar iklan komersial luar. Dilengkapi had masa skrin (screen-time limiter) untuk menjaga kesejahteraan mata anak.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_0_#CBD5E1] flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">insights</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Radar Topik Lemah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Aplikasi mengesan topik yang memerlukan pengukuhan seperti ejaan Jawi atau rukun solat secara terperinci.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION BANNER -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto relative rounded-3xl bg-primary overflow-hidden p-space-lg md:p-space-xl text-center flex flex-col items-center gap-space-md shadow-[0_10px_0_#00422b]">
+<!-- Decorative background stars / bubbles -->
+<div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-primary-fixed/20 blur-xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-secondary-fixed/20 blur-xl pointer-events-none"></div>
+<div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full font-label-md text-label-md font-bold">
+<span class="">🎉</span>
+<span class="">Sedia untuk Menjadi Juara UPKK?</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary max-w-2xl leading-tight">
+        Sertai Ribuan Pelajar Cilik Malaysia dalam Kembara Ilmu Paling Menarik!
+      </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed max-w-xl">
+        Daftar percuma hari ini dan tebus <strong class="text-secondary-fixed">100 Syiling Pengembara Pertama</strong> untuk membuka kostum pengembara istimewa.
+      </p>
+<div class="pt-space-sm flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary-fixed font-headline-sm text-headline-sm px-space-xl py-4 rounded-full shadow-[0_5px_0_#684000] hover:shadow-[0_2px_0_#684000] hover:translate-y-1 active:translate-y-1.5 active:shadow-none transition-all">
+<span class="">Daftar Akaun Percuma</span>
+<span class="">🎒</span>
+</button>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm px-space-lg py-4 rounded-full shadow-[0_5px_0_#CBD5E1] hover:shadow-[0_2px_0_#CBD5E1] hover:translate-y-1 active:translate-y-1.5 active:shadow-none transition-all" href="#peta-dunia">
+<span class="">Teroka Peta Lagi</span>
+<span class="">🗺️</span>
+</a>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs text-on-primary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">✓ Tiada kad kredit diperlukan</span>
+<span class="flex items-center gap-1">✓ Sesuai untuk tablet &amp; telefon</span>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript logic for Demo Quiz and TTS accessibility -->
+<script>
+    function handleSelectOption(choice) {
+      const correctBox = document.getElementById('quiz-feedback');
+      const errorBox = document.getElementById('quiz-error-feedback');
+      const allButtons = document.querySelectorAll('.option-btn');
+      
+      // Reset button styles
+      allButtons.forEach(btn => {
+        btn.classList.remove('bg-primary-fixed', 'ring-2', 'ring-primary', 'bg-error-container', 'ring-error');
+      });
+
+      if (choice === 'A') {
+        const btnA = document.getElementById('opt-a');
+        btnA.classList.add('bg-primary-fixed', 'ring-2', 'ring-primary');
+        correctBox.classList.remove('hidden');
+        errorBox.classList.add('hidden');
+      } else {
+        const selectedBtn = document.getElementById('opt-' + choice.toLowerCase());
+        selectedBtn.classList.add('bg-error-container', 'ring-2', 'ring-error');
+        errorBox.classList.remove('hidden');
+        correctBox.classList.add('hidden');
+      }
+    }
+
+    function playAudioPrompt() {
+      const ttsBtn = document.getElementById('tts-btn');
+      const originalText = ttsBtn.innerHTML;
+      ttsBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Membaca...</span>';
+      
+      if ('speechSynthesis' in window) {
+        const text = "Ali melihat ibunya baru pulang dari pasar membawa banyak beg barang dapur yang berat. Apakah tindakan terbaik Ali?";
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ms-MY';
+        utterance.onend = function() {
+          ttsBtn.innerHTML = originalText;
+        };
+        utterance.onerror = function() {
+          ttsBtn.innerHTML = originalText;
+        };
+        window.speechSynthesis.speak(utterance);
+      } else {
+        setTimeout(() => {
+          ttsBtn.innerHTML = originalText;
+        }, 1500);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-xl mt-space-xl shadow-[0_-1px_10px_rgba(0,0,0,0.02)]"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">UPKK Adventure</span><span class="font-body-sm text-body-sm text-on-surface-variant">• Belajar Sambil Bermain &amp; Menang Ganjaran</span></div><div class="flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-on-surface-variant">© 2025 UPKK Adventure. Hak Cipta Terpelihara.</span></div></div></footer>
+
+</body></html>
