@@ -1,0 +1,1291 @@
+You are a senior full-stack developer, UX/UI designer, educational game designer and Islamic primary education instructional designer.
+
+Your task is to DESIGN AND BUILD a complete working web application for Malaysian primary school children to learn and practise UPKK-related subjects through:
+
+1. Storytelling
+2. Interactive learning
+3. Gamification
+4. Practice questions
+5. Quizzes
+6. Progress tracking
+7. Rewards and achievements
+8. Revision based on weak topics
+
+The application must feel like a LEARNING ADVENTURE rather than a conventional examination portal.
+
+PROJECT NAME:
+Create a suitable working title such as "UPKK Adventure", "Misi UPKK", or another child-friendly Islamic learning name. Make the application name easy to change later from a configuration file.
+
+TARGET USERS:
+Primary school children, initially focusing on Year 2 and Year 3.
+
+Age range:
+Approximately 8–9 years old.
+
+Primary language:
+Bahasa Malaysia.
+
+Arabic/Jawi should be supported where required by the subject matter.
+
+The interface must be easy enough for a child to navigate independently.
+
+--------------------------------------------------
+1. IMPORTANT SOURCE MATERIAL
+--------------------------------------------------
+
+I will provide sample Year 2 and Year 3 questions.
+
+Analyse these files carefully before creating the learning content.
+
+Use the supplied materials to identify:
+
+- topics
+- subtopics
+- terminology
+- question styles
+- difficulty level
+- wording style
+- expected knowledge level
+- common question patterns
+- age-appropriate language
+- Jawi/Arabic usage where applicable
+
+DO NOT blindly copy the questions.
+
+Instead:
+
+1. classify the questions,
+2. identify their learning objectives,
+3. build a content taxonomy,
+4. generate NEW questions that follow the same learning level and structure.
+
+Do not introduce religious facts that you are uncertain about.
+
+For Islamic knowledge, accuracy is more important than creativity.
+
+Where a source answer is uncertain, flag it for teacher/parent review instead of inventing an answer.
+
+--------------------------------------------------
+2. APPLICATION LEARNING MODEL
+--------------------------------------------------
+
+Structure learning using this flow:
+
+STORY
+↓
+LEARN
+↓
+EXPLORE
+↓
+PRACTISE
+↓
+CHALLENGE
+↓
+FEEDBACK
+↓
+REWARD
+↓
+REVIEW
+
+Every topic should have a short learning journey.
+
+Example:
+
+Topic:
+Adab Dengan Ibu Bapa
+
+Stage 1 — Story
+
+Show a short illustrated scenario:
+
+"Aiman pulang dari sekolah dan melihat ibunya sedang membawa barang yang banyak..."
+
+Let the child follow the story.
+
+Stage 2 — Think
+
+Ask:
+
+"Apakah yang patut Aiman lakukan?"
+
+Allow the child to make a choice.
+
+Stage 3 — Learn
+
+Explain the Islamic value or concept using simple child-friendly language.
+
+Stage 4 — Practice
+
+Provide 3–5 simple questions.
+
+Stage 5 — Challenge
+
+Provide a mini quiz.
+
+Stage 6 — Reward
+
+Award:
+
+XP
+stars
+coins
+badge progress
+
+Stage 7 — Reflection
+
+Example:
+
+"Hari ini saya belajar bahawa..."
+
+Give 2–3 simple selectable reflection statements.
+
+--------------------------------------------------
+3. SUBJECT ARCHITECTURE
+--------------------------------------------------
+
+Do not hard-code the system to only two school years.
+
+Create a scalable architecture:
+
+YEAR
+→ SUBJECT
+→ TOPIC
+→ SUBTOPIC
+→ STORY
+→ LEARNING CONTENT
+→ PRACTICE
+→ QUIZ
+→ MASTERY
+
+Initial levels:
+
+Year 2
+Year 3
+
+The architecture must allow Year 4, Year 5 and other levels to be added later without redesigning the app.
+
+Create subject configuration dynamically based on the provided reference materials.
+
+Possible Islamic education areas may include subjects/topics such as:
+
+- Sirah
+- Akidah
+- Ibadah
+- Adab
+- Jawi
+- Bahasa Arab
+- Ulum Syariah
+
+However, DO NOT assume these are the exact supplied subjects.
+
+Analyse the uploaded material first.
+
+--------------------------------------------------
+4. STORYTELLING ENGINE
+--------------------------------------------------
+
+Storytelling is one of the core features of this application.
+
+Each learning unit should support a short interactive story.
+
+Story length:
+approximately 3–6 scenes.
+
+Each scene can contain:
+
+- illustration placeholder
+- narrator text
+- character dialogue
+- question
+- choice
+- learning point
+
+Example structure:
+
+Scene 1:
+Aisyah wakes up in the morning.
+
+Scene 2:
+She prepares for Subuh prayer.
+
+Scene 3:
+The learner chooses what Aisyah should do next.
+
+Scene 4:
+The application explains the lesson.
+
+Stories must be:
+
+- short
+- positive
+- age appropriate
+- culturally appropriate for Malaysian Muslim children
+- easy to understand
+- related to daily life
+- connected to the learning objective
+
+Avoid unnecessarily long stories.
+
+Add a "Skip Story" button for revision sessions.
+
+--------------------------------------------------
+5. GAMIFICATION SYSTEM
+--------------------------------------------------
+
+Create a meaningful gamification system.
+
+Include:
+
+XP
+
+Example:
+Correct answer = +10 XP
+Perfect quiz = bonus XP
+Daily learning = bonus XP
+
+LEVELS
+
+Example:
+
+Level 1 — Pelajar Baru
+Level 2 — Pencari Ilmu
+Level 3 — Sahabat Ilmu
+Level 4 — Bintang UPKK
+Level 5 — Juara UPKK
+
+Make these configurable.
+
+STARS
+
+Each topic can earn:
+
+1 star = completed
+2 stars = good mastery
+3 stars = excellent mastery
+
+COINS
+
+Children earn virtual coins.
+
+Coins can unlock cosmetic rewards such as:
+
+- avatar accessories
+- character outfits
+- profile frames
+- backgrounds
+- badges
+
+Coins must NOT involve real-money purchases.
+
+BADGES
+
+Examples:
+
+Bintang Sirah
+Jaguh Jawi
+Hebat Ibadah
+Sahabat Adab
+Pakar Akidah
+Arabic Explorer
+7-Day Streak
+Perfect Score
+
+STREAKS
+
+Track consecutive learning days.
+
+Do not punish children excessively for missing a day.
+
+--------------------------------------------------
+6. ADVENTURE MAP
+--------------------------------------------------
+
+Design the main student learning area as an ADVENTURE MAP.
+
+Instead of displaying topics as a boring list, present them as learning locations.
+
+Example:
+
+Kampung Adab
+↓
+Masjid Ibadah
+↓
+Bukit Akidah
+↓
+Kota Sirah
+↓
+Pulau Jawi
+↓
+Arabia Quest
+
+The exact names should be configurable.
+
+Each location represents learning topics.
+
+Topics unlock gradually.
+
+Visual state:
+
+Locked
+Available
+In Progress
+Completed
+Mastered
+
+Clicking a location opens its learning journey.
+
+--------------------------------------------------
+7. QUESTION ENGINE
+--------------------------------------------------
+
+Build a reusable question engine supporting multiple question types.
+
+Required question types:
+
+A. Multiple Choice
+
+B. True / False
+
+C. Match the Answer
+
+D. Drag and Drop
+
+E. Arrange in Correct Order
+
+F. Fill in the Blank
+
+G. Image-based Questions
+
+H. Scenario Questions
+
+I. Jawi Questions
+
+J. Arabic Vocabulary Questions
+
+K. Story Decision Questions
+
+Example scenario question:
+
+"Ali melihat rakannya terjatuh di sekolah. Apakah tindakan terbaik?"
+
+Do not only test memorisation.
+
+Include age-appropriate:
+
+remembering
+understanding
+simple application
+simple situational reasoning
+
+--------------------------------------------------
+8. QUESTION RANDOMISATION
+--------------------------------------------------
+
+The quiz engine must support:
+
+- random question order
+- random answer order
+- different questions during repeated attempts
+- difficulty tags
+- topic tags
+- learning objective tags
+
+Each question record should contain fields such as:
+
+id
+year
+subject
+topic
+subtopic
+difficulty
+questionType
+question
+options
+correctAnswer
+explanation
+hint
+learningObjective
+sourceReference
+
+--------------------------------------------------
+9. FEEDBACK SYSTEM
+--------------------------------------------------
+
+Do not only display:
+
+"Betul"
+
+or
+
+"Salah"
+
+Every answer should provide meaningful feedback.
+
+Correct answer example:
+
+"Alhamdulillah! Betul. Membantu ibu bapa merupakan perbuatan yang baik."
+
+Incorrect answer example:
+
+"Belum tepat. Cuba fikir semula bagaimana kita menunjukkan adab yang baik kepada ibu bapa."
+
+Then provide:
+
+Hint
+Try Again
+Show Explanation
+
+Use encouraging language without making every response excessively celebratory.
+
+--------------------------------------------------
+10. MASTERY-BASED LEARNING
+--------------------------------------------------
+
+Track mastery by topic.
+
+Suggested status:
+
+0–39% = Perlu Bimbingan
+40–59% = Sedang Belajar
+60–79% = Baik
+80–89% = Sangat Baik
+90–100% = Dikuasai
+
+Do not permanently classify a learner based on one attempt.
+
+Use cumulative performance.
+
+If a learner repeatedly gets a concept wrong, place related questions into:
+
+"Latihan Saya"
+
+or
+
+"Misi Pengukuhan"
+
+Generate a personalised revision queue.
+
+--------------------------------------------------
+11. SMART REVISION
+--------------------------------------------------
+
+Build a simple adaptive learning engine.
+
+Track:
+
+wrong answers
+topics attempted
+accuracy
+number of attempts
+recent performance
+
+Example:
+
+If learner repeatedly answers questions about Wuduk incorrectly:
+
+Dashboard displays:
+
+"Misi Hari Ini: Kuasai Wuduk"
+
+Then offer:
+
+1 short explanation
+1 story/scenario
+3 practice questions
+1 mini challenge
+
+Do not require artificial intelligence for the MVP.
+
+Use rule-based logic initially.
+
+Structure the architecture so AI-generated personalised learning can be added later.
+
+--------------------------------------------------
+12. STUDENT DASHBOARD
+--------------------------------------------------
+
+Create a visually attractive dashboard containing:
+
+Greeting
+
+Example:
+
+"Assalamualaikum, Ayla!"
+
+Current Level
+
+XP progress bar
+
+Daily streak
+
+Total stars
+
+Coins
+
+Continue Learning
+
+Daily Mission
+
+Subjects
+
+Adventure Map
+
+Recent badges
+
+Weak Topics
+
+Recommended Revision
+
+Overall progress
+
+--------------------------------------------------
+13. CHILD PROFILE
+--------------------------------------------------
+
+Each child profile should contain:
+
+name
+avatar
+school year
+XP
+level
+stars
+coins
+badges
+streak
+subject progress
+topic progress
+quiz history
+weak topics
+achievements
+
+Allow multiple child profiles in future architecture.
+
+--------------------------------------------------
+14. PARENT DASHBOARD
+--------------------------------------------------
+
+Create a separate parent view.
+
+Parents should see:
+
+Child name
+Learning time
+Topics completed
+Current progress
+Quiz scores
+Accuracy by subject
+Strong topics
+Weak topics
+Recent activities
+Achievements
+Suggested revision areas
+
+Use simple charts.
+
+Example:
+
+Sirah – 82%
+Ibadah – 71%
+Jawi – 55%
+Adab – 90%
+
+Display:
+
+"Perlu perhatian: Jawi"
+
+Parents should not need technical knowledge to understand the dashboard.
+
+--------------------------------------------------
+15. PRACTICE MODE
+--------------------------------------------------
+
+Include:
+
+Quick Practice
+Topic Practice
+Weak Topic Practice
+Mixed Practice
+
+Allow learner to choose:
+
+5 questions
+10 questions
+20 questions
+
+--------------------------------------------------
+16. EXAM / CHALLENGE MODE
+--------------------------------------------------
+
+Create a separate assessment mode.
+
+Possible modes:
+
+Mini Challenge
+Subject Challenge
+Weekly Challenge
+Mock Assessment
+
+During formal challenge mode:
+
+- do not reveal answers immediately
+- show final score after completion
+- provide review afterwards
+
+Practice mode should provide immediate feedback.
+
+--------------------------------------------------
+17. BOSS CHALLENGE
+--------------------------------------------------
+
+Add an optional gamified challenge at the end of major learning sections.
+
+Example:
+
+"BOSS CHALLENGE: Guardian of Sirah"
+
+The child must answer several questions correctly to complete the level.
+
+This should remain educational rather than violent.
+
+Reward:
+
+badge
+XP
+coins
+new map area
+
+--------------------------------------------------
+18. UI / UX DESIGN
+--------------------------------------------------
+
+The application should look like a premium modern educational game.
+
+Design direction:
+
+Modern
+Clean
+Colourful
+Islamic-friendly
+Child-friendly
+Professional
+Playful without looking preschool-like
+
+Avoid:
+
+overcrowded screens
+tiny text
+complex menus
+excessive animation
+generic corporate dashboard appearance
+
+Use:
+
+large touch-friendly buttons
+rounded cards
+clear icons
+friendly illustrations
+soft transitions
+progress animations
+micro-interactions
+
+Create responsive layouts for:
+
+desktop
+tablet
+mobile
+
+Prioritise tablet experience.
+
+--------------------------------------------------
+19. DESIGN SYSTEM
+--------------------------------------------------
+
+Create reusable components.
+
+Examples:
+
+Button
+Card
+ProgressBar
+XPBar
+Badge
+QuizCard
+AnswerOption
+StoryScene
+AdventureNode
+SubjectCard
+AchievementPopup
+RewardModal
+ParentStatCard
+
+Define:
+
+typography
+spacing
+border radius
+shadows
+icons
+colour tokens
+success
+warning
+error
+locked states
+
+Avoid excessive colours.
+
+Use a consistent visual identity.
+
+--------------------------------------------------
+20. ACCESSIBILITY
+--------------------------------------------------
+
+Ensure:
+
+large readable fonts
+high contrast
+clear answer states
+keyboard accessibility where appropriate
+touch-friendly targets
+simple navigation
+minimal reading overload
+
+Allow an optional audio/read-aloud button architecture for future implementation.
+
+--------------------------------------------------
+21. TECH STACK
+--------------------------------------------------
+
+Build using a modern maintainable stack.
+
+Preferred:
+
+Next.js
+TypeScript
+React
+Tailwind CSS
+shadcn/ui where appropriate
+
+For icons:
+Lucide icons
+
+For charts:
+Recharts
+
+For simple animations:
+Framer Motion
+
+Use a clean modular component architecture.
+
+For MVP data storage:
+
+Use localStorage or a simple local persistence layer.
+
+However, design the data abstraction so it can later migrate to:
+
+Supabase
+PostgreSQL
+Firebase
+
+without rewriting the entire application.
+
+--------------------------------------------------
+22. APPLICATION ROUTES
+--------------------------------------------------
+
+Suggested routes:
+
+/
+Landing / profile selection
+
+/dashboard
+Student dashboard
+
+/adventure
+Adventure map
+
+/subject/[subjectId]
+Subject page
+
+/topic/[topicId]
+Topic learning journey
+
+/story/[storyId]
+Interactive story
+
+/practice
+Practice selector
+
+/practice/[topicId]
+Practice session
+
+/quiz/[quizId]
+Quiz
+
+/challenge
+Challenges
+
+/achievements
+Badges and rewards
+
+/profile
+Student profile
+
+/parent
+Parent dashboard
+
+/settings
+Settings
+
+--------------------------------------------------
+23. DATA STRUCTURE
+--------------------------------------------------
+
+Create a proper content model.
+
+Example:
+
+Student
+
+Subject
+
+Topic
+
+Subtopic
+
+Story
+
+StoryScene
+
+Question
+
+Quiz
+
+QuizAttempt
+
+Achievement
+
+Badge
+
+Progress
+
+Reward
+
+DailyMission
+
+Do not store the entire application as one large static object.
+
+Separate content from application logic.
+
+--------------------------------------------------
+24. CONTENT MANAGEMENT
+--------------------------------------------------
+
+Design the application so I can easily add new questions later.
+
+Create a simple question-bank structure using JSON or TypeScript data files for MVP.
+
+Example folder:
+
+/data
+  /year2
+  /year3
+
+Within each year:
+
+subjects
+topics
+questions
+stories
+
+I should be able to add new questions without modifying core application code.
+
+--------------------------------------------------
+25. TEACHER / ADMIN FUTURE READINESS
+--------------------------------------------------
+
+Do not build an overly complex admin portal in the first MVP.
+
+However, prepare the architecture for a future admin feature that can:
+
+Add question
+Edit question
+Delete question
+Import questions
+Filter by year
+Filter by subject
+Filter by topic
+View question statistics
+
+--------------------------------------------------
+26. QUESTION IMPORT
+--------------------------------------------------
+
+Create an import architecture that can eventually accept:
+
+CSV
+Excel
+JSON
+
+For the current MVP, JSON import is sufficient.
+
+Provide a sample JSON question schema.
+
+--------------------------------------------------
+27. ISLAMIC CONTENT SAFETY
+--------------------------------------------------
+
+This requirement is critical.
+
+Never fabricate:
+
+Quran verses
+Hadith
+religious rulings
+Arabic meanings
+Islamic historical events
+
+When generating learning content:
+
+distinguish between:
+
+SOURCE-VERIFIED CONTENT
+
+and
+
+AI-GENERATED PRACTICE CONTENT
+
+For religious facts, use the reference material supplied by the user whenever available.
+
+Add a reviewStatus field:
+
+verified
+needs_review
+draft
+
+Do not expose unverified religious claims as authoritative content.
+
+--------------------------------------------------
+28. SAMPLE CONTENT
+--------------------------------------------------
+
+After analysing the uploaded questions, create enough seed content to demonstrate the application.
+
+At minimum:
+
+2 school years
+
+At least 3 subjects if supported by the provided source
+
+At least 3 topics per demonstrated subject where source material allows
+
+At least 5 questions per demonstrated topic
+
+Several interactive stories
+
+However:
+
+do not invent syllabus coverage merely to meet these numbers.
+
+If the source material does not support a subject/topic, create only what can reasonably be supported and clearly mark demo content.
+
+--------------------------------------------------
+29. DEMO ACCOUNT
+--------------------------------------------------
+
+Create a demo child profile.
+
+Name:
+Alya
+
+Year:
+Year 3
+
+Populate some sample progress so dashboard components can be demonstrated.
+
+--------------------------------------------------
+30. MICROCOPY
+--------------------------------------------------
+
+Use child-friendly Bahasa Malaysia.
+
+Examples:
+
+"Jom Belajar"
+
+"Sambung Misi"
+
+"Cuba Lagi"
+
+"Hebat!"
+
+"Naik Level!"
+
+"Misi Selesai"
+
+"Latihan Saya"
+
+"Topik Yang Perlu Dikuasai"
+
+Avoid overly childish baby language.
+
+--------------------------------------------------
+31. HOME SCREEN EXPERIENCE
+--------------------------------------------------
+
+The first student screen should make it immediately obvious what to do.
+
+Show:
+
+Assalamualaikum + child name
+
+TODAY'S MISSION
+
+CONTINUE LEARNING
+
+ADVENTURE MAP
+
+DAILY STREAK
+
+XP
+
+A child should be able to start learning within one or two clicks.
+
+--------------------------------------------------
+32. CELEBRATION EXPERIENCE
+--------------------------------------------------
+
+When learners:
+
+complete a topic
+reach a new level
+earn a badge
+achieve a perfect quiz score
+
+show a short animated celebration.
+
+Avoid excessive animation that slows the app.
+
+--------------------------------------------------
+33. ERROR AND EMPTY STATES
+--------------------------------------------------
+
+Design proper states for:
+
+no progress
+no questions
+completed topic
+locked topic
+loading
+incorrect answer
+offline/local mode
+
+Never leave blank pages.
+
+--------------------------------------------------
+34. CODE QUALITY
+--------------------------------------------------
+
+Requirements:
+
+Use TypeScript strictly.
+
+Use reusable components.
+
+Avoid duplicated logic.
+
+Use clear folder structure.
+
+Use meaningful variable names.
+
+Separate:
+
+UI
+data
+business logic
+quiz logic
+gamification logic
+progress logic
+
+Create utility functions for:
+
+calculateXP
+calculateLevel
+calculateMastery
+updateStreak
+awardBadge
+selectAdaptiveQuestions
+
+--------------------------------------------------
+35. DEVELOPMENT APPROACH
+--------------------------------------------------
+
+Do NOT attempt to dump the entire application into one giant file.
+
+Work systematically.
+
+PHASE 1
+
+Analyse the supplied sample questions.
+
+Produce internally:
+
+content taxonomy
+year structure
+subjects
+topics
+question types
+difficulty distribution
+
+PHASE 2
+
+Create application architecture and data model.
+
+PHASE 3
+
+Build design system and navigation.
+
+PHASE 4
+
+Build student dashboard.
+
+PHASE 5
+
+Build adventure map.
+
+PHASE 6
+
+Build story learning engine.
+
+PHASE 7
+
+Build quiz and practice engine.
+
+PHASE 8
+
+Build gamification.
+
+PHASE 9
+
+Build progress/mastery system.
+
+PHASE 10
+
+Build parent dashboard.
+
+PHASE 11
+
+Populate seed content based on supplied materials.
+
+PHASE 12
+
+Test the complete application.
+
+--------------------------------------------------
+36. TESTING
+--------------------------------------------------
+
+Test:
+
+navigation
+question answering
+score calculation
+XP calculation
+level progression
+coin rewards
+badge unlocking
+topic completion
+mastery calculation
+streak
+local persistence
+responsive design
+quiz retry
+randomisation
+
+Check for console errors.
+
+Ensure the app works after browser refresh.
+
+--------------------------------------------------
+37. FINAL QUALITY STANDARD
+--------------------------------------------------
+
+The finished product should NOT look like:
+
+a generic school LMS
+a simple Google Form
+a static quiz website
+a spreadsheet converted into a web page
+
+It should feel like:
+
+Duolingo-style microlearning
++
+interactive Islamic learning
++
+adventure game progression
++
+UPKK practice platform
+
+but must have its own original identity.
+
+The learning value must always be more important than visual gimmicks.
+
+--------------------------------------------------
+38. MVP PRIORITY
+--------------------------------------------------
+
+If scope becomes too large, prioritise a fully working MVP in this order:
+
+1. Student profile
+2. Dashboard
+3. Subjects/topics
+4. Story learning
+5. Question engine
+6. Quiz/practice
+7. Scoring
+8. XP and levels
+9. Progress tracking
+10. Adventure map
+11. Badges
+12. Parent dashboard
+
+A smaller fully functional application is preferable to many unfinished features.
+
+--------------------------------------------------
+39. FIRST ACTION
+--------------------------------------------------
+
+Begin by examining all supplied Year 2 and Year 3 sample questions.
+
+Before making major assumptions, extract:
+
+Year
+Subject
+Topic
+Subtopic
+Question style
+Knowledge tested
+Difficulty
+Language/script used
+
+Use this extracted structure to inform the application.
+
+Then proceed to build the app.
+
+Do not stop after giving me a plan.
+
+Create the actual project files and implement the application.
+
+When a feature is incomplete, implement the simplest functional version rather than leaving TODO placeholders.
+
+Run the app, identify errors and fix them.
+
+At the end, provide:
+
+1. what has been implemented,
+2. project structure,
+3. how to run the app,
+4. where question data is stored,
+5. how I can add new questions,
+6. which parts are ready for future expansion.
